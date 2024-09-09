@@ -47,6 +47,47 @@ ul li {
     border-left: 3px solid #333;
 }
 
+/* Scrollable portfolio section */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9f9f9;
+}
+
+.scroll-item {
+    min-width: 300px;
+    scroll-snap-align: start;
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 footer {
     text-align: center;
     background: #333;
