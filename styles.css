@@ -93,7 +93,7 @@ h2 {
 
 .scroll-item img {
     max-width: 100%; /* Ensure the image takes the full width of its container */
-    height: auto; /* Maintain aspect ratio */
+    height: auto;    /* Maintain aspect ratio */
     border-radius: 8px;
     transition: transform 0.3s ease; /* Smooth zoom effect */
     position: relative;
@@ -101,7 +101,7 @@ h2 {
 }
 
 .scroll-item img:hover {
-    transform: scale(1.2); /* Zoom the image on hover */
+    transform: scale(1.5); /* Increase zoom to 1.5x */
     z-index: 10; /* Bring it in front of other elements */
 }
 
