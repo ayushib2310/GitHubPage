@@ -27,81 +27,102 @@ section#about {
     padding: 20px;
 }
 
-section#projects {
-    padding: 20px;
+section#experience-education {
+    padding: 40px;
     text-align: center;
 }
 
-section#projects h2 {
+section#experience-education h2 {
     font-size: 2rem;
     margin-bottom: 40px;
 }
 
-/* Project Card Styling */
-.project-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
-    max-width: 700px;
-    text-align: center;
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.project-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.project-card p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #666;
-}
-
-/* Buttons */
-.buttons {
+/* Timeline Container */
+.timeline-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 40px;
 }
 
-.btn-primary, .btn-secondary {
-    padding: 10px 20px;
-    text-decoration: none;
+/* Experience and Education Sections */
+.timeline-section {
+    flex: 1;
+    padding: 0 20px;
+    position: relative;
+}
+
+.timeline-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    text-transform: uppercase;
     border: 2px solid #000;
-    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.experience-item, .education-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 250px;
+    position: relative;
+}
+
+.experience-item h4, .education-item h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Timeline Vertical Line */
+.timeline-line {
+    width: 2px;
+    background-color: #ddd;
+    position: relative;
+    margin: 0 20px;
+}
+
+.year {
+    position: absolute;
+    left: -25px;
+    color: #333;
     font-size: 1rem;
-    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
 }
 
-.btn-primary {
-    background-color: #fff;
-    color: #000;
+.year:nth-child(1) {
+    top: 0px;
 }
 
-.btn-primary:hover {
-    background-color: #000;
-    color: #fff;
+.year:nth-child(2) {
+    top: 50px;
 }
 
-.btn-secondary {
-    background-color: #f0f8ff;
-    color: #007bff;
-    border-color: #007bff;
+.year:nth-child(3) {
+    top: 150px;
 }
 
-.btn-secondary:hover {
-    background-color: #007bff;
-    color: #fff;
+.year:nth-child(4) {
+    top: 300px;
+}
+
+.year:nth-child(5) {
+    top: 450px;
+}
+
+.year:nth-child(6) {
+    top: 600px;
 }
 
 /* Footer Styling */
