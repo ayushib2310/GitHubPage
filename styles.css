@@ -42,7 +42,7 @@ h2 {
 .timeline {
     position: relative;
     margin: 40px 0;
-    padding-left: 80px; /* Increase padding to avoid cutting off the date text */
+    padding-left: 80px; /* Padding ensures dates are not cut off */
     border-left: 2px solid #ddd;
 }
 
@@ -64,7 +64,7 @@ h2 {
     background-color: #4CAF50; /* Customize color */
     border: 3px solid #fff;
     position: absolute;
-    left: -12px;
+    left: -30px;
     top: 0;
     z-index: 2;
 }
@@ -74,12 +74,12 @@ h2 {
     font-size: 1rem;
     margin-bottom: 10px;
     color: #333;
-    padding-left: 20px; /* Add more padding to ensure the month is fully visible */
+    padding-left: 10px;
     display: inline-block;
-    width: 200px; /* Increase the width to avoid cutting off the text */
-    white-space: nowrap; /* Prevent text wrapping */
+    width: 200px; /* Increased width */
+    white-space: nowrap; /* Prevent wrapping */
     overflow: visible; /* Ensure the date is fully visible */
-    text-align: left; /* Ensure text is aligned properly */
+    text-align: left;
 }
 
 /* Job details or content */
@@ -92,7 +92,7 @@ h2 {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Vertical line for connecting circles (optional) */
+/* Vertical line for connecting circles */
 .timeline-item .vertical-line {
     position: absolute;
     left: -1px;
@@ -106,7 +106,7 @@ h2 {
     display: none; /* Hide vertical line after the last item */
 }
 
-/* Scrollable Portfolio Section */
+/* Scrollable Project Section */
 .scroll-container {
     display: flex;
     overflow-x: auto;
@@ -127,10 +127,10 @@ h2 {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: visible;
+    transition: transform 0.3s ease;
 }
 
-.scroll-item h3 {
+.scroll-item h3, .scroll-item h4 {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
@@ -140,8 +140,6 @@ h2 {
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1;
     transform-origin: center center;
 }
 
@@ -212,4 +210,15 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 1rem;
+}
+
+/* Project Section */
+.project-section {
+    margin-bottom: 40px;
+}
+
+.project-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: left;
 }
