@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayushi's Portfolio</title>
+    <title>Interactive Timeline</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,62 +12,97 @@
         <p>A passionate Data Analyst, constantly learning and growing.</p>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Passionate analytics expert turning data into strategic solutions, driven by the belief that persistence and insight fuel business success.</p>
-    </section>
-
     <section id="experience-education">
-        <h2>Timeline</h2>
-        <div class="timeline-container">
-            <!-- Experience -->
-            <div class="timeline-section">
-                <h3>Add Experience</h3>
-                <div class="timeline-item">
-                    <div class="experience-item" style="background-color: #e74c3c;">
-                        <h4>Data Analyst</h4>
-                        <p>Lotte Biologics</p>
-                    </div>
-                    <div class="experience-item" style="background-color: #8e44ad;">
-                        <h4>Data Analyst</h4>
-                        <p>iConsult Collaborative</p>
-                    </div>
-                    <div class="experience-item" style="background-color: #2980b9;">
-                        <h4>Data Engineering Intern</h4>
-                        <p>iConsult Collaborative</p>
-                    </div>
-                    <div class="experience-item" style="background-color: #27ae60;">
-                        <h4>Assistant Manager Analytics</h4>
-                        <p>The Wadia Group of Companies</p>
-                    </div>
+        <h2>Work Experience Timeline</h2>
+        <div class="interactive-timeline">
+            <div class="timeline-item" onclick="openModal('modal1')">
+                <div class="circle"></div>
+                <div class="content">
+                    <h4>Data Analyst</h4>
+                    <p>Lotte Biologics (Jun 2023 - Present)</p>
                 </div>
             </div>
-
-            <!-- Vertical Line -->
-            <div class="timeline-line">
-                <div class="year">2025</div>
-                <div class="year">2024</div>
-                <div class="year">2023</div>
-                <div class="year">2022</div>
-                <div class="year">2021</div>
-                <div class="year">2020</div>
+            <div class="timeline-item" onclick="openModal('modal2')">
+                <div class="circle"></div>
+                <div class="content">
+                    <h4>Data Analyst</h4>
+                    <p>iConsult Collaborative (Jul 2022 - Dec 2023)</p>
+                </div>
             </div>
-
-            <!-- Education -->
-            <div class="timeline-section">
-                <h3>Add Education</h3>
-                <div class="timeline-item">
-                    <div class="education-item" style="background-color: #e91e63;">
-                        <h4>Information Systems</h4>
-                        <p>Syracuse University</p>
-                    </div>
+            <div class="timeline-item" onclick="openModal('modal3')">
+                <div class="circle"></div>
+                <div class="content">
+                    <h4>Data Engineering Intern</h4>
+                    <p>iConsult Collaborative (May 2021 - Jul 2022)</p>
+                </div>
+            </div>
+            <div class="timeline-item" onclick="openModal('modal4')">
+                <div class="circle"></div>
+                <div class="content">
+                    <h4>Assistant Manager Analytics</h4>
+                    <p>The Wadia Group (Jun 2019 - May 2021)</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Modals for more details -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>Data Analyst - Lotte Biologics</h3>
+            <p>Details about your role, responsibilities, and achievements in this position.</p>
+        </div>
+    </div>
+    
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>Data Analyst - iConsult Collaborative</h3>
+            <p>Details about your role, responsibilities, and achievements in this position.</p>
+        </div>
+    </div>
+    
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>Data Engineering Intern - iConsult Collaborative</h3>
+            <p>Details about your role, responsibilities, and achievements in this position.</p>
+        </div>
+    </div>
+    
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h3>Assistant Manager Analytics - The Wadia Group</h3>
+            <p>Details about your role, responsibilities, and achievements in this position.</p>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 Ayushi B.</p>
     </footer>
+
+    <script>
+        // Open modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal if clicked outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
