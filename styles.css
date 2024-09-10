@@ -42,7 +42,7 @@ h2 {
 .timeline {
     position: relative;
     margin: 40px 0;
-    padding-left: 60px; /* Increase padding to avoid cutting off the date text */
+    padding-left: 80px; /* Increase padding to avoid cutting off the date text */
     border-left: 2px solid #ddd;
 }
 
@@ -74,11 +74,12 @@ h2 {
     font-size: 1rem;
     margin-bottom: 10px;
     color: #333;
-    padding-left: 10px; /* Add padding to make sure the month is fully visible */
+    padding-left: 20px; /* Add more padding to ensure the month is fully visible */
     display: inline-block;
-    width: 180px; /* Ensure the date container has enough width */
+    width: 200px; /* Increase the width to avoid cutting off the text */
     white-space: nowrap; /* Prevent text wrapping */
     overflow: visible; /* Ensure the date is fully visible */
+    text-align: left; /* Ensure text is aligned properly */
 }
 
 /* Job details or content */
